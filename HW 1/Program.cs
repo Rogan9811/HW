@@ -1,4 +1,4 @@
-﻿Console.Write("Choose number of home work(2, 4, 6): ");
+﻿Console.Write("Choose number of home work(2, 4, 6, 8): ");
 int task = Convert.ToInt32(Console.ReadLine());
 
 switch(task)
@@ -64,5 +64,46 @@ switch(task)
          }
     
     Console.WriteLine("largest number is " + BIGNUMB);
+    break;
+
+    case 6:
+    //     Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+    // 4 -> да
+    // -3 -> нет
+    // 7 -> нет
+
+    Console.WriteLine("This is a fourth task. ");
+    Console.Write("Enter number: ");
+    int count = Convert.ToInt32(Console.ReadLine());
+    int del = count % 2;
+    
+    if(del == 0)
+    {
+        Console.Write("This is even number.");
+    }
+    else
+    {
+        Console.Write("This is odd number.");
+    }
+    break;
+
+    case 8:
+    //     Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+    // 5 -> 2, 4
+    // 8 -> 2, 4, 6, 8
+
+    Console.WriteLine("This is a fourth task. ");
+    Console.Write("Enter number: ");
+    int N = Convert.ToInt32(Console.ReadLine());
+
+    for(int i = 1; i <= N; i++)
+    {
+        if(i % 2 == 0)
+        {
+            Console.Write(i + " ");
+        }
+    }
     break;
 }
