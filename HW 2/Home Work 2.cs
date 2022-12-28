@@ -13,6 +13,7 @@ switch(task)
 
     Console.WriteLine(n2);
     break;
+    
     case 13:
     Console.Write("введите ЛЮБОЕ число: ");
     int fNumber = Convert.ToInt32(Console.ReadLine());
@@ -28,7 +29,7 @@ switch(task)
         }
 
     break;
-    
+
     case 15:
     Console.WriteLine("Введите номер дня недели: ");
     int day = Convert.ToInt32(Console.ReadLine());
