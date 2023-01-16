@@ -66,7 +66,7 @@ switch (tasks)
                 ii = Math.Pow(ii, 3);
                 Console.Write(ii + " ");
             }
-        }
+        }   
 
         void NegativePrintCube(int cube)
         {
