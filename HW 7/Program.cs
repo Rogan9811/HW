@@ -73,40 +73,40 @@ switch(tasks)
     break;
 
     case 52:
-        void fill22Array(int[,] array, int m, int n)
-            {
-                for (int i = 0; i < n; i++)
-                {
-                    for (int j = 0; j < m; j++)
-                    {
-                        array[i,j] = new Random().Next(-10, 10);
-                        Console.Write(array[i, j] + " ");
-                    }
-                    Console.WriteLine();
-                }
-            }
-        void middleArifmethic(int[,] array, int n, int m)
+        void Fill2x2DoubleArray(double[,] array, int m, int n)
         {
-            int sum = 0;
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    sum += array[i,j];
+                    array[i,j] = new Random().Next(-10, 10);
+                    Console.Write(array[i, j] + " ");
                 }
-                Console.WriteLine($"For {i+1} line middle arifmethic sum is {sum}.");
+                Console.WriteLine();
+            }
+        }
+        void middleArifmethic(double[,] array, int row, int column)
+        {
+            double sum = 0;
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < column; j++)
+                {
+                    sum += array[j, i] / column;
+                }
+                Console.WriteLine($"For {i+1} column middle arifmethic sum is {Math.Round(sum, 2)}.");
                 sum = 0;
             }
         }
 
 
         Console.Write("Enter n: ");
-        int n52 = Convert.ToInt32(Console.ReadLine());
+        int row52 = Convert.ToInt32(Console.ReadLine());
         Console.Write("Enter m: ");
-        int m52 = Convert.ToInt32(Console.ReadLine());
-        int[,] array52 = new int[n52,m52];
+        int column52 = Convert.ToInt32(Console.ReadLine());
+        double[,] array52 = new double[row52,column52];
 
-        fill22Array(array52, n52, m52);
-        middleArifmethic(array52, n52, m52);
+        Fill2x2DoubleArray(array52, row52, column52);
+        middleArifmethic(array52, row52, column52);
     break;
 }
